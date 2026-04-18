@@ -307,15 +307,16 @@ h2, h3 {
     font-size: 16px;
   }
 
-  .family-section {
-    gap: 28px;
-    margin-top: 26px;
-  }
-
-  .family-block {
-    min-width: auto;
-    width: 100%;
-  }
+ .family-section {
+  gap: 40px;
+  margin-top: 26px;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.family-block {
+  width: auto;
+  min-width: 0;
+}
 
   .family-parents {
     font-size: 24px;
