@@ -1,4 +1,5 @@
 :root {
+    
   --bg: #fbf6f2;
   --card: #ffffff;
   --text: #3e302c;
@@ -16,11 +17,9 @@
 body {
   margin: 0;
   font-family: 'Cormorant Garamond', serif;
-  background:
-    url("./images/kapak-bg.jpeg") center top / cover no-repeat fixed;
+  background: var(--bg);
   color: var(--text);
-  line-height: 1.7;
-  font-size: 18px;
+  line-height: 1.6;
 }
 
 .hidden {
@@ -47,7 +46,7 @@ body {
 
 .cover h1 {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(44px, 8vw, 88px);
+  font-size: clamp(42px, 8vw, 86px);
   margin: 0;
 }
 
@@ -58,15 +57,6 @@ body {
 .cover-date {
   margin: 16px 0 28px;
   color: var(--muted);
-  font-size: 20px;
-}
-
-.eyebrow {
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  font-size: 14px;
-  color: var(--muted);
-  margin-bottom: 10px;
 }
 
 /* BUTTONS */
@@ -76,59 +66,28 @@ body {
   padding: 14px 26px;
   cursor: pointer;
   text-decoration: none;
-  font-size: 17px;
-  transition: all 0.25s ease;
 }
 
 .primary-btn {
   background: var(--accent);
   color: #fff;
-  border: none;
 }
 
 .secondary-btn {
   border: 1px solid var(--accent);
   color: var(--accent-dark);
-  background: rgba(255, 255, 255, 0.72);
-}
-
-.secondary-btn:hover {
-  background: rgba(255, 255, 255, 0.9);
 }
 
 /* SECTIONS */
 .section {
   max-width: 960px;
-  margin: 24px auto;
+  margin: 0 auto;
   padding: 72px 20px;
   text-align: center;
-  background: rgba(255, 255, 255, 0.84);
-  border-radius: 24px;
-  backdrop-filter: blur(2px);
 }
 
 h2, h3 {
   font-family: 'Playfair Display', serif;
-}
-
-.hero h2,
-.countdown-section h2,
-.location-section h2 {
-  font-size: clamp(30px, 5vw, 44px);
-  margin: 0 0 12px;
-}
-
-.hero h3 {
-  font-size: clamp(26px, 4vw, 36px);
-  margin: 0 0 16px;
-  color: var(--accent-dark);
-}
-
-.lead {
-  max-width: 700px;
-  margin: 0 auto;
-  color: var(--muted);
-  font-size: 19px;
 }
 
 /* FAMILY */
@@ -151,12 +110,12 @@ h2, h3 {
 }
 
 .family-parents {
-  font-size: 28px;
+  font-size: 26px;
   color: var(--accent-dark);
 }
 
 .family-surname {
-  font-size: 24px;
+  font-size: 22px;
   letter-spacing: 2px;
   color: var(--accent-dark);
 }
@@ -169,24 +128,9 @@ h2, h3 {
 }
 
 .detail-item {
-  background: rgba(255, 255, 255, 0.92);
+  background: var(--card);
   border-radius: 22px;
   padding: 20px;
-  box-shadow: var(--shadow);
-}
-
-.detail-item h4 {
-  margin: 0 0 8px;
-  font-size: 16px;
-  color: var(--muted);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-.detail-item p {
-  margin: 0;
-  font-size: 24px;
-  font-weight: 600;
 }
 
 /* COUNTDOWN */
@@ -198,30 +142,14 @@ h2, h3 {
 }
 
 .timer-box {
-  background: rgba(255, 255, 255, 0.92);
+  background: var(--card);
   padding: 18px;
   border-radius: 22px;
-  min-width: 100px;
-  box-shadow: var(--shadow);
 }
 
 .timer-box span {
-  font-size: 34px;
+  font-size: 32px;
   display: block;
-  font-weight: 700;
-}
-
-.timer-box small {
-  font-size: 16px;
-  color: var(--muted);
-}
-
-/* LOCATION */
-.location-section .address {
-  font-size: 19px;
-  color: var(--muted);
-  margin: 0 auto 22px;
-  max-width: 600px;
 }
 
 /* MAP BUTTONS */
@@ -236,26 +164,12 @@ h2, h3 {
 .map-btn {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 10px;
   min-width: 200px;
 }
 
 .map-icon svg {
   width: 18px;
-  height: 18px;
-}
-
-/* FOOTER */
-.footer {
-  max-width: 960px;
-  margin: 24px auto 40px;
-  padding: 28px 20px 50px;
-  text-align: center;
-  color: var(--muted);
-  font-size: 18px;
-  background: rgba(255, 255, 255, 0.84);
-  border-radius: 24px;
 }
 
 /* ANIMATION */
@@ -272,15 +186,8 @@ h2, h3 {
 
 /* MOBILE */
 @media (max-width: 768px) {
-  body {
-    font-size: 17px;
-    background:
-      url("./images/kapak-bg.jpeg") center top / cover no-repeat;
-  }
-
   .section {
     padding: 56px 16px;
-    margin: 18px 12px;
   }
 
   .details-card {
@@ -289,34 +196,6 @@ h2, h3 {
 
   .family-section {
     gap: 30px;
-  }
-
-  .family-parents {
-    font-size: 26px;
-  }
-
-  .family-surname {
-    font-size: 22px;
-  }
-
-  .detail-item p {
-    font-size: 22px;
-  }
-
-  .timer-box span {
-    font-size: 30px;
-  }
-
-  .cover-date {
-    font-size: 18px;
-  }
-
-  .lead {
-    font-size: 18px;
-  }
-
-  .footer {
-    margin: 18px 12px 30px;
   }
 }
 
@@ -328,21 +207,5 @@ h2, h3 {
 
   .map-btn {
     width: 85%;
-  }
-
-  .family-section {
-    gap: 20px;
-  }
-
-  .family-parents {
-    font-size: 22px;
-  }
-
-  .family-surname {
-    font-size: 19px;
-  }
-
-  .family-divider {
-    height: 56px;
   }
 }
