@@ -16,7 +16,8 @@
 body {
   margin: 0;
   font-family: 'Cormorant Garamond', serif;
-  background: var(--bg);
+  background:
+    url("./images/kapak-bg.jpeg") center top / cover no-repeat fixed;
   color: var(--text);
   line-height: 1.7;
   font-size: 18px;
@@ -76,24 +77,34 @@ body {
   cursor: pointer;
   text-decoration: none;
   font-size: 17px;
+  transition: all 0.25s ease;
 }
 
 .primary-btn {
   background: var(--accent);
   color: #fff;
+  border: none;
 }
 
 .secondary-btn {
   border: 1px solid var(--accent);
   color: var(--accent-dark);
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.secondary-btn:hover {
+  background: rgba(255, 255, 255, 0.9);
 }
 
 /* SECTIONS */
 .section {
   max-width: 960px;
-  margin: 0 auto;
+  margin: 24px auto;
   padding: 72px 20px;
   text-align: center;
+  background: rgba(255, 255, 255, 0.84);
+  border-radius: 24px;
+  backdrop-filter: blur(2px);
 }
 
 h2, h3 {
@@ -158,9 +169,10 @@ h2, h3 {
 }
 
 .detail-item {
-  background: var(--card);
+  background: rgba(255, 255, 255, 0.92);
   border-radius: 22px;
   padding: 20px;
+  box-shadow: var(--shadow);
 }
 
 .detail-item h4 {
@@ -186,10 +198,11 @@ h2, h3 {
 }
 
 .timer-box {
-  background: var(--card);
+  background: rgba(255, 255, 255, 0.92);
   padding: 18px;
   border-radius: 22px;
   min-width: 100px;
+  box-shadow: var(--shadow);
 }
 
 .timer-box span {
@@ -235,10 +248,14 @@ h2, h3 {
 
 /* FOOTER */
 .footer {
+  max-width: 960px;
+  margin: 24px auto 40px;
   padding: 28px 20px 50px;
   text-align: center;
   color: var(--muted);
   font-size: 18px;
+  background: rgba(255, 255, 255, 0.84);
+  border-radius: 24px;
 }
 
 /* ANIMATION */
@@ -257,10 +274,13 @@ h2, h3 {
 @media (max-width: 768px) {
   body {
     font-size: 17px;
+    background:
+      url("./images/kapak-bg.jpeg") center top / cover no-repeat;
   }
 
   .section {
     padding: 56px 16px;
+    margin: 18px 12px;
   }
 
   .details-card {
@@ -293,6 +313,10 @@ h2, h3 {
 
   .lead {
     font-size: 18px;
+  }
+
+  .footer {
+    margin: 18px 12px 30px;
   }
 }
 
