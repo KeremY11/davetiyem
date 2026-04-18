@@ -325,4 +325,67 @@ h2, h3 {
   .family-surname {
     font-size: 21px;
   }
+  .map-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+@media (max-width: 480px) {
+  .map-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .map-buttons a {
+    width: 80%;
+    text-align: center;
+  }
+}
+.map-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.map-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-width: 210px;
+}
+
+.map-icon {
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.map-icon svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+.apple-icon svg {
+  width: 17px;
+  height: 17px;
+}
+
+@media (max-width: 480px) {
+  .map-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .map-btn {
+    width: 85%;
+  }
+}
 }
